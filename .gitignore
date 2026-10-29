@@ -1,0 +1,16 @@
+# Local credentials and environment configuration in any workshop project.
+.env*
+!.env.example
+*.pem
+*.key
+
+# Dependencies, generated output, and local caches.
+node_modules/
+.next/
+out/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+*.log
+.DS_Store

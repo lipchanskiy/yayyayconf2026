@@ -1,0 +1,46 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "workshop/todo_shared"
+
+import {
+  "moonbit-community/proton_contract",
+  "moonbitlang/core/debug",
+  "moonbitlang/core/json",
+}
+
+// Values
+pub let todos : @proton_contract.Command[Action, Snapshot]
+
+// Errors
+
+// Types and methods
+pub(all) enum Action {
+  List
+  Add(String)
+  SetCompleted(Int64, Bool)
+  Delete(Int64)
+} derive(ToJson, @json.FromJson)
+pub fn Action::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn Action::to_json(Self) -> Json
+
+pub(all) struct Snapshot {
+  todos : Array[Todo]
+} derive(Eq, ToJson, @json.FromJson)
+pub fn Snapshot::equal(Self, Self) -> Bool
+pub fn Snapshot::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn Snapshot::not_equal(Self, Self) -> Bool
+pub fn Snapshot::to_json(Self) -> Json
+
+pub(all) struct Todo {
+  id : Int64
+  title : String
+  completed : Bool
+} derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn Todo::equal(Self, Self) -> Bool
+pub fn Todo::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn Todo::not_equal(Self, Self) -> Bool
+pub fn Todo::to_json(Self) -> Json
+pub fn Todo::to_repr(Self) -> @debug.Repr
+
+// Type aliases
+
+// Traits

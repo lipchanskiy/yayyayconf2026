@@ -1,0 +1,8 @@
+import {
+  "moonbitlang/core/json",
+  "moonbit-community/proton_contract" @contract,
+}
+
+import {
+  "workshop/todo_shared" @shared,
+} for "test"

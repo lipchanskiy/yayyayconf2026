@@ -1,0 +1,26 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "workshop/todo_shared/store"
+
+import {
+  "moonbit-community/sqlite3",
+  "workshop/todo_shared",
+}
+
+// Values
+
+// Errors
+pub(all) suberror InvalidTodo {
+  EmptyTitle
+}
+
+// Types and methods
+pub struct Store {
+  db : @sqlite3.Connection
+}
+pub fn Store::close(Self) -> Unit raise
+pub fn Store::execute(Self, @todo_shared.Action) -> @todo_shared.Snapshot raise
+pub fn Store::open(String) -> Self raise
+
+// Type aliases
+
+// Traits

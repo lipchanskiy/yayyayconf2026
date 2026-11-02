@@ -19,3 +19,13 @@ Describe a system and the builder uses DeepSeek to generate an architecture and 
 BestLang does not exist. There is no compiler or runtime: the downloaded archive contains illustrative source and a runbook explaining the human work still required. The programmer check is part of the joke.
 
 See the [project README](./crazy-landing-page/README.md) for setup, implementation details, and demo limitations.
+
+### [MoonBit TodoList — full-stack web and desktop app](./moonbit-lambdaworld-workshop/)
+
+**Workshop:** Full-stack development with MoonBit (Lambda World)
+
+A TodoList application built with MoonBit across the frontend and backend. A Rabbita UI talks to a MoonBack web server over HTTP or to a Proton desktop app over IPC. Both backends use the same typed protocol and SQLite store.
+
+This version includes the completed delete exercise alongside adding and completing todos, plus customizations to the frontend. The web backend supports Wasm and native targets; the desktop app uses the native runtime.
+
+Based on the [original workshop project](https://github.com/Milky2018/moonbit-lambdaworld-workshop). See the [project README](./moonbit-lambdaworld-workshop/README.md) for setup, commands, and architecture, and the [exercise](./moonbit-lambdaworld-workshop/EXERCISE.md) for the task completed during the workshop.

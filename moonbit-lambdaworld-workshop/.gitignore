@@ -1,0 +1,50 @@
+# Dependencies and local tools
+.mooncakes/
+.tools/
+
+# Locally installed agent skills (keep other project agent settings trackable)
+/.agents/skills/
+/.claude/skills/
+/skills-lock.json
+
+# Build and packaging output
+_build/
+target/
+dist/
+
+# SQLite databases and sidecar files
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite-journal
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3-shm
+*.sqlite3-wal
+
+# Local environment (templates belong in version control)
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.sample
+!.env.template
+
+# Runtime logs
+*.log
+
+# Editor-local state and temporary files
+.idea/
+*.swp
+*.swo
+*~
+/.vscode/*.local.json
+
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,11 @@
+import {
+  "workshop/todo_shared" @shared,
+  "moonbit-community/rabbita",
+  "moonbit-community/rabbita/html",
+  "moonbit-community/rabbita/http",
+  "moonbit-community/proton_rabbita" @desktop,
+}
+
+supported_targets = "js"
+
+pkgtype(kind: "executable")

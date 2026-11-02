@@ -1,0 +1,15 @@
+import {
+  "workshop/todo_shared" @shared,
+  "workshop/todo_shared/store",
+  "moonbitlang/moonback",
+  "moonbitlang/async",
+  "moonbitlang/core/json",
+  "moonbitlang/moonback/middlewares/unstable_static" @static,
+  "moonbitlang/async/http",
+  "moonbitlang/async/socket",
+  "moonbitlang/core/env",
+}
+
+supported_targets = "wasm+native"
+
+pkgtype(kind: "executable")

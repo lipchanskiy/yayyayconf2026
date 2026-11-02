@@ -1,0 +1,12 @@
+{
+  "identifier": "com.example.moonbit-todo",
+  "backend": { "path": ".", "package": "desktop" },
+  "frontend": {
+    "path": "frontend",
+    "dev_url": "http://127.0.0.1:4300",
+    "before_dev": "warren dev --browser-entry . --direct --port 4300",
+    "before_build": "warren build --browser-entry .",
+    "dist": "dist"
+  },
+  "package": { "product_name": "TodoList", "version": "0.1.0", "output": "dist" }
+}
